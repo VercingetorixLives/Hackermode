@@ -11,12 +11,12 @@ import tty
 
 STARTING_LINES = [
     "[ OK ] Mounted /dev/mainframe",
-    "[ OK ] Contacted Lain to help HACK".,
+    "[ OK ] Contacted Lain to help HACK.",
     "[ OK ] Loading Hacker tools............",
     "[ OK ] Connected to anonymization proxy.",
     "[ OK ] Started Google Chrome OPSEC protocol.",
     "[ OK ] Checked for duplicate French language packs.",
-    "[WARN] Extra French language pack detected: run 'sudo rm -fr /*",
+    "[WARN] Extra French language pack detected: run 'sudo rm -fr /'*",
     "[ OK ] Routing packets through 17 proxies and Tor...",
     "[ OK ] Compiling IP tracker...",
     "[ OK ] Injecting vibecoding AI Agent capabilities...",
@@ -88,8 +88,8 @@ def startup_func():
         slowerline(line)
         time.sleep(random.uniform(0.03, 0.1))
     write("\r\n")
-    slowerline("hackermode initialized.")
-    slowerline("all hacking daemons and modules loaded into the motherboard, hacking is ready to begin.")
+    slowerline("Hackermode initialized.")
+    slowerline("All hacking daemons and modules loaded into the motherboard, hacking is ready to begin.")
     write(PROMPT)
 def hacking_burst():
     for _ in range(random.randint(1, 8)):
@@ -105,7 +105,7 @@ def main():
     try:
         tty.setraw(sys.stdin.fileno())
         startup_func()
-        esc_count = 
+        esc_count = 0
         while True:
             ch = sys.stdin.read(1)
             if ch == "\x1b":
